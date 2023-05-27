@@ -19,6 +19,7 @@ services:
       - ./config.json:/var/www/config.json
     depends_on:
       - mongodb
-
+    stdin_open: true
+    tty: true
 volumes:
   data:

@@ -22,7 +22,7 @@
     "document": "EN"
   },
   "account": {
-    "autoCreate": false,
+    "autoCreate": true,
     "EXPERIMENTAL_RealPassword": false,
     "defaultPermissions": [],
     "maxPlayer": -1
@@ -34,18 +34,18 @@
     "logCommands": false,
     "http": {
       "bindAddress": "0.0.0.0",
-      "bindPort": 443,
-      "accessAddress": "192.168.1.26",
+      "bindPort": 80,
+      "accessAddress": "192.168.123.42",
       "accessPort": 0,
       "encryption": {
-        "useEncryption": true,
-        "useInRouting": true,
+        "useEncryption": false,
+        "useInRouting": false,
         "keystore": "./keystore.p12",
         "keystorePassword": "123456"
       },
       "policies": {
         "cors": {
-          "enabled": false,
+          "enabled": true,
           "allowedOrigins": ["*"]
         }
       },
@@ -57,11 +57,10 @@
     "game": {
       "bindAddress": "0.0.0.0",
       "bindPort": 22102,
-      "accessAddress": "192.168.1.26",
+      "accessAddress": "192.168.123.42",
       "accessPort": 0,
       "loadEntitiesForPlayerRange": 100,
       "enableScriptInBigWorld": false,
-      "enableConsole": false,
       "kcpInterval": 20,
       "logPackets": "NONE",
       "isShowPacketPayload": false,
